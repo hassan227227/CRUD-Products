@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product CRUD</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Product CRUD</h1>
+
+    <h2>List of Products</h2>
+    <ul id="productList"></ul>
+
+    <h2>Create Product</h2>
+    <form id="createForm">
+        <label for="createName">Name:</label>
+        <input type="text" id="createName" required>
+        <label for="createPrice">Price:</label>
+        <input type="number" id="createPrice" required>
+        <button type="submit">Create</button>
+    </form>
+
+    <h2>Update Product</h2>
+    <form id="updateForm" style="display: none;">
+        <input type="hidden" id="updateProductId">
+        <label for="updateName">Name:</label>
+        <input type="text" id="updateName" required>
+        <label for="updatePrice">Price:</label>
+        <input type="number" id="updatePrice" required>
+        <button type="submit">Update</button>
+        <button type="button" class="cancel" onclick="hideUpdateForm()">Cancel</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
